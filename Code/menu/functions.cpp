@@ -4,6 +4,8 @@
 
 using namespace std;
 
+HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
 char** mazeGenerator(char** map, int size)
 {
 	srand(int(time(0)));
@@ -44,4 +46,29 @@ char** mazeGenerator(char** map, int size)
 	}
 
 	return map;
+}
+
+void showMaze(char** map, int size)
+{
+	system("cls");
+
+	for (int i = 0; i < size; i++)
+	{
+		for (int j = 0; j < size * 2; j++)
+		{
+			if (map[i][j] == '*')
+			{
+				SetConsoleTextAttribute(hConsole, 6);
+				cout << map[i][j];
+				SetConsoleTextAttribute(hConsole, 15);
+			}
+			else
+			{
+				cout << map[i][j];
+			}
+		}
+		cout << endl;
+	}
+
+	cout << endl;
 }
