@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int main()
+void menu()
 {
     cout << "            _______   _         _______   _______   _______   _______       _________  _______" << endl;
     cout << "|\\     /| (   ____ \\ ( \\       (  ____ \\ (  ___  ) (       ) (  ____ \\      \\__  __/  (  ___  )" << endl;
