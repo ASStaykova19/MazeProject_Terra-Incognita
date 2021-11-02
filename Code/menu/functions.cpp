@@ -6,6 +6,15 @@ using namespace std;
 
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
+struct CELL {
+	bool left;
+	bool top;
+	bool right;
+	bool bottom;
+	bool visited;
+	char symbol;
+};
+
 char** mazeGenerator(char** map, int size)
 {
 	srand(int(time(0)));
