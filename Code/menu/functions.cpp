@@ -193,7 +193,7 @@ CELL** gemazeGenerator(CELL** map, int size)
 					backX.push_back(ranX);
 					backY.push_back(ranY);
 
-					ranX -= 2;
+					ranX += 2;
 					map[ranY][ranX].visited = true;
 					map[ranY][ranX].symbol = ' ';
 					map[ranY][ranX].left = false;
