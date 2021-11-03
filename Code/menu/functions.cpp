@@ -19,3 +19,11 @@ int indexXY(int x, int y)
 {
 	return y * mapWidth + x;
 }
+
+bool checkXY(int x, int y)
+{
+	if (x < 0 || x >= mapWidth) return false;
+	if (y < 0 || y >= mapHeight) return false;
+
+	return true;
+}
