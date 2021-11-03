@@ -98,3 +98,48 @@ char** transfer(char** map, char* grid, int& colectCount)
 
 	return map;
 }
+
+void drawMap(char** map)
+{
+	system("cls");
+
+	for (int y = 0; y < mapHeight; ++y)
+	{
+		for (int x = 0; x < mapWidth; ++x)
+		{
+			if (map[y][x] == 'J')
+			{
+				SetConsoleTextAttribute(hConsole, 4);
+				cout << " " << map[y][x];
+				SetConsoleTextAttribute(hConsole, 7);
+			}
+			else if (map[y][x] == 'x')
+			{
+				SetConsoleTextAttribute(hConsole, 2);
+				cout << " " << map[y][x];
+				SetConsoleTextAttribute(hConsole, 7);
+			}
+			else if (map[y][x] == '*')
+			{
+				SetConsoleTextAttribute(hConsole, 6);
+				cout << " " << map[y][x];
+				SetConsoleTextAttribute(hConsole, 7);
+			}
+			else
+			{
+				if ((y + x) % 2 == 0)
+				{
+					SetConsoleTextAttribute(hConsole, 8);
+					cout << " " << map[y][x];
+					SetConsoleTextAttribute(hConsole, 7);
+				}
+				else
+				{
+					cout << " " << map[y][x];
+				}
+			}
+		}
+
+		cout << endl;
+	}
+}
