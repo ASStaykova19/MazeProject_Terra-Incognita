@@ -15,6 +15,12 @@ HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 int mapHeight = 0;
 int mapWidth = 0;
 
+int colectCount = 0;
+int playerColect = 0;
+
+int x = 1;
+int y = 1;
+
 int indexXY(int x, int y)
 {
 	return y * mapWidth + x;
@@ -141,5 +147,136 @@ void drawMap(char** map)
 		}
 
 		cout << endl;
+	}
+}
+
+void move(char** map)
+{
+	bool gameRuning = true;
+
+	while (gameRuning == true)
+	{
+		drawMap(map);
+
+		cout << endl;
+
+		if (playerColect == colectCount)
+		{
+			SetConsoleTextAttribute(hConsole, 5);
+			cout << "Colected: " << playerColect << " of " << colectCount;
+		}
+		else
+		{
+			cout << "Colected: " << playerColect << " of " << colectCount;
+		}
+
+		system("pause>nul");
+
+		if (GetAsyncKeyState(VK_DOWN))
+		{
+			int y2 = y + 1;
+			if (map[y2][x] == ' ')
+			{
+				map[y][x] = ' ';
+				y++;
+				map[y][x] = 'J';
+			}
+			if (map[y2][x] == '*')
+			{
+				playerColect++;
+				map[y][x] = ' ';
+				y++;
+				map[y][x] = 'J';
+			}
+			if (map[y2][x] == 'x')
+			{
+				system("cls");
+				SetConsoleTextAttribute(hConsole, 2);
+				cout << "YOU WIN";
+				gameRuning = false;
+			}
+		}
+		if (GetAsyncKeyState(VK_UP))
+		{
+			int y2 = y - 1;
+			if (map[y2][x] == ' ')
+			{
+				map[y][x] = ' ';
+				y--;
+				map[y][x] = 'J';
+			}
+			if (map[y2][x] == '*')
+			{
+				playerColect++;
+				map[y][x] = ' ';
+				y--;
+				map[y][x] = 'J';
+			}
+			if (map[y2][x] == 'x')
+			{
+				system("cls");
+				SetConsoleTextAttribute(hConsole, 2);
+				cout << "YOU WIN";
+				gameRuning = false;
+			}
+		}
+
+		if (GetAsyncKeyState(VK_RIGHT))
+		{
+			int x2 = x + 1;
+			if (map[y][x2] == ' ')
+			{
+				map[y][x] = ' ';
+				x++;
+				map[y][x] = 'J';
+			}
+			if (map[y][x2] == '*')
+			{
+				playerColect++;
+				map[y][x] = ' ';
+				x++;
+				map[y][x] = 'J';
+			}
+			if (map[y][x2] == 'x')
+			{
+				system("cls");
+				SetConsoleTextAttribute(hConsole, 2);
+				cout << "YOU WIN";
+				gameRuning = false;
+			}
+		}
+
+		if (GetAsyncKeyState(VK_LEFT))
+		{
+			int x2 = x - 1;
+			if (map[y][x2] == ' ')
+			{
+				map[y][x] = ' ';
+				x--;
+				map[y][x] = 'J';
+			}
+			if (map[y][x2] == '*')
+			{
+				playerColect++;
+				map[y][x] = ' ';
+				x--;
+				map[y][x] = 'J';
+			}
+			if (map[y][x2] == 'x')
+			{
+				system("cls");
+				SetConsoleTextAttribute(hConsole, 2);
+				cout << "YOU WIN";
+				gameRuning = false;
+			}
+		}
+
+		if (GetAsyncKeyState(VK_ESCAPE))
+		{
+			system("cls");
+			SetConsoleTextAttribute(hConsole, 4);
+			cout << "GAME OVER";
+			gameRuning = false;
+		}
 	}
 }
