@@ -72,3 +72,29 @@ void generateMap(int x, int y, char* grid)
 		}
 	}
 }
+
+char** transfer(char** map, char* grid, int& colectCount)
+{
+	system("cls");
+
+	for (int y = 0; y < mapHeight; ++y)
+	{
+		for (int x = 0; x < mapWidth; ++x)
+		{
+			map[y][x] = grid[indexXY(x, y)];
+
+			int random = rand();
+
+			if (map[y][x] == ' ')
+			{
+				if (random % 51 == 0 && (map[y][x] != map[1][1] || map[y][x] != map[mapHeight - 2][mapWidth - 2]))
+				{
+					map[y][x] = '*';
+					colectCount++;
+				}
+			}
+		}
+	}
+
+	return map;
+}
