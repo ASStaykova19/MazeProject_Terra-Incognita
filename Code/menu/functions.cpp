@@ -280,3 +280,9 @@ void move(char** map)
 		}
 	}
 }
+
+void enterSize()
+{
+	cin >> mapHeight;
+	cin >> mapWidth;
+}
