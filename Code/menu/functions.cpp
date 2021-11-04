@@ -104,6 +104,48 @@ char** transfer(char** map, char* grid, int& colectCount)
 	return map;
 }
 
+void makeExit(char** map)
+{
+	bool exisIsMade = false;
+	for (int i = 1; i < mapHeight; i++)
+	{
+		for (int j = 1; j < mapWidth; j++)
+		{
+			if (map[i][j] != map[1][1])
+			{
+				if ((map[i][j - 1] == '#' && map[i - 1][j - 1] == '#') && (map[i - 1][j] == '#' && map[i - 1][j + 1] == '#') && map[i][j + 1] == '#')
+				{
+					map[i][j] = 'x';
+					exisIsMade = true;
+					break;
+				}
+				else if ((map[i - 1][j] == '#' && map[i - 1][j + 1] == '#') && (map[i][j + 1] == '#' && map[i + 1][j + 1] == '#') && map[i + 1][j] == '#')
+				{
+					map[i][j] = 'x';
+					exisIsMade = true;
+					break;
+				}
+				else if ((map[i][j + 1] == '#' && map[i + 1][j + 1] == '#') && (map[i + 1][j] == '#' && map[i + 1][j - 1] == '#') && map[i][j - 1] == '#')
+				{
+					map[i][j] = 'x';
+					exisIsMade = true;
+					break;
+				}
+				else if ((map[i - 1][j] == '#' && map[i - 1][j - 1] == '#') && (map[i][j - 1] == '#' && map[i + 1][j - 1] == '#') && map[i + 1][j] == '#')
+				{
+					map[i][j] = 'x';
+					exisIsMade = true;
+					break;
+				}
+			}
+		}
+		if (exisIsMade)
+		{
+			break;
+		}
+	}
+}
+
 void drawMap(char** map)
 {
 	system("cls");
