@@ -14,12 +14,6 @@ HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 int mapHeight = 0;
 int mapWidth = 0;
 
-int colectCount = 0;
-int playerColect = 0;
-
-int x = 1;
-int y = 1;
-
 int indexXY(int x, int y)
 {
 	return y * mapWidth + x;
@@ -184,7 +178,7 @@ void drawMap(char** map)
 	}
 }
 
-void move(char** map)
+void move(char** map, int x, int y, int& playerColect, int& colectCount)
 {
 	bool gameRuning = true;
 

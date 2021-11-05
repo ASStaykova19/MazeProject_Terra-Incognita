@@ -6,4 +6,7 @@
 
 using namespace std;
 
+extern int mapHeight;
+extern int mapWidth;
+
 void menu();
