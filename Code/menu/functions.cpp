@@ -113,25 +113,25 @@ void makeExit(char** map)
 		{
 			if (map[i][j] != map[1][1])
 			{
-				if ((map[i][j - 1] == '#' && map[i - 1][j - 1] == '#') && (map[i - 1][j] == '#' && map[i - 1][j + 1] == '#') && map[i][j + 1] == '#')
+				if ((map[i][j - 1] == '#' && map[i - 1][j - 1] == '#') && (map[i - 1][j] == '#' && map[i - 1][j + 1] == '#') && (map[i][j + 1] == '#' && map[i][j] != '*'))
 				{
 					map[i][j] = 'x';
 					exisIsMade = true;
 					break;
 				}
-				else if ((map[i - 1][j] == '#' && map[i - 1][j + 1] == '#') && (map[i][j + 1] == '#' && map[i + 1][j + 1] == '#') && map[i + 1][j] == '#')
+				else if ((map[i - 1][j] == '#' && map[i - 1][j + 1] == '#') && (map[i][j + 1] == '#' && map[i + 1][j + 1] == '#') && (map[i + 1][j] == '#' && map[i][j] != '*'))
 				{
 					map[i][j] = 'x';
 					exisIsMade = true;
 					break;
 				}
-				else if ((map[i][j + 1] == '#' && map[i + 1][j + 1] == '#') && (map[i + 1][j] == '#' && map[i + 1][j - 1] == '#') && map[i][j - 1] == '#')
+				else if ((map[i][j + 1] == '#' && map[i + 1][j + 1] == '#') && (map[i + 1][j] == '#' && map[i + 1][j - 1] == '#') && (map[i][j - 1] == '#' && map[i][j] != '*'))
 				{
 					map[i][j] = 'x';
 					exisIsMade = true;
 					break;
 				}
-				else if ((map[i - 1][j] == '#' && map[i - 1][j - 1] == '#') && (map[i][j - 1] == '#' && map[i + 1][j - 1] == '#') && map[i + 1][j] == '#')
+				else if ((map[i - 1][j] == '#' && map[i - 1][j - 1] == '#') && (map[i][j - 1] == '#' && map[i + 1][j - 1] == '#') && (map[i + 1][j] == '#' && map[i][j] != '*'))
 				{
 					map[i][j] = 'x';
 					exisIsMade = true;
