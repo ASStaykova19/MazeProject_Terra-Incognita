@@ -174,16 +174,9 @@ void drawMap(char** map)
 			}
 			else
 			{
-				if ((y + x) % 2 == 0)
-				{
-					SetConsoleTextAttribute(hConsole, 8);
-					cout << " " << map[y][x];
-					SetConsoleTextAttribute(hConsole, 7);
-				}
-				else
-				{
-					cout << " " << map[y][x];
-				}
+				SetConsoleTextAttribute(hConsole, 8);
+				cout << " " << map[y][x];
+				SetConsoleTextAttribute(hConsole, 7);
 			}
 		}
 
