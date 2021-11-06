@@ -225,7 +225,14 @@ void move(char** map, int& colectCount, int& playerColect, int x, int y)
 			{
 				system("cls");
 				SetConsoleTextAttribute(hConsole, 2);
-				cout << "YOU WIN" << endl;
+				cout << "            _______                         _________  _         _" << endl;
+				cout << " |\\     /| (  ___  ) |\\     /|    |\\     /| \\__   __/ ( (    /| ( )" << endl;
+				cout << " ( \\   / ) | (   ) | | )   ( |    | )   ( |    ) (    |  \\  ( | | |" << endl;
+				cout << "  \\ (_) /  | |   | | | |   | |    | | _ | |    | |    |   \\ | | | |" << endl;
+				cout << "   \\   /   | |   | | | |   | |    | |( )| |    | |    | (\\ \\) | | |" << endl;
+				cout << "    ) (    | |   | | | |   | |    | || || |    | |    | | \\   | (_)" << endl;
+				cout << "    | |    | (___) | | (___) |    | () () | ___) (___ | )  \\  |  _ " << endl;
+				cout << "    \\_/    (_______) (_______)    (_______) \\_______/ |/    )_) (_)" << endl;
 				SetConsoleTextAttribute(hConsole, 7);
 				gameRuning = false;
 			}
@@ -250,7 +257,14 @@ void move(char** map, int& colectCount, int& playerColect, int x, int y)
 			{
 				system("cls");
 				SetConsoleTextAttribute(hConsole, 2);
-				cout << "YOU WIN" << endl;
+				cout << "            _______                         _________  _         _" << endl;
+				cout << " |\\     /| (  ___  ) |\\     /|    |\\     /| \\__   __/ ( (    /| ( )" << endl;
+				cout << " ( \\   / ) | (   ) | | )   ( |    | )   ( |    ) (    |  \\  ( | | |" << endl;
+				cout << "  \\ (_) /  | |   | | | |   | |    | | _ | |    | |    |   \\ | | | |" << endl;
+				cout << "   \\   /   | |   | | | |   | |    | |( )| |    | |    | (\\ \\) | | |" << endl;
+				cout << "    ) (    | |   | | | |   | |    | || || |    | |    | | \\   | (_)" << endl;
+				cout << "    | |    | (___) | | (___) |    | () () | ___) (___ | )  \\  |  _ " << endl;
+				cout << "    \\_/    (_______) (_______)    (_______) \\_______/ |/    )_) (_)" << endl;
 				SetConsoleTextAttribute(hConsole, 7);
 				gameRuning = false;
 			}
@@ -276,7 +290,14 @@ void move(char** map, int& colectCount, int& playerColect, int x, int y)
 			{
 				system("cls");
 				SetConsoleTextAttribute(hConsole, 2);
-				cout << "YOU WIN" << endl;
+				cout << "            _______                         _________  _         _" << endl;
+				cout << " |\\     /| (  ___  ) |\\     /|    |\\     /| \\__   __/ ( (    /| ( )" << endl;
+				cout << " ( \\   / ) | (   ) | | )   ( |    | )   ( |    ) (    |  \\  ( | | |" << endl;
+				cout << "  \\ (_) /  | |   | | | |   | |    | | _ | |    | |    |   \\ | | | |" << endl;
+				cout << "   \\   /   | |   | | | |   | |    | |( )| |    | |    | (\\ \\) | | |" << endl;
+				cout << "    ) (    | |   | | | |   | |    | || || |    | |    | | \\   | (_)" << endl;
+				cout << "    | |    | (___) | | (___) |    | () () | ___) (___ | )  \\  |  _ " << endl;
+				cout << "    \\_/    (_______) (_______)    (_______) \\_______/ |/    )_) (_)" << endl;
 				SetConsoleTextAttribute(hConsole, 7);
 				gameRuning = false;
 			}
@@ -302,7 +323,14 @@ void move(char** map, int& colectCount, int& playerColect, int x, int y)
 			{
 				system("cls");
 				SetConsoleTextAttribute(hConsole, 2);
-				cout << "YOU WIN" << endl;
+				cout << "            _______                         _________  _         _" << endl;
+				cout << " |\\     /| (  ___  ) |\\     /|    |\\     /| \\__   __/ ( (    /| ( )" << endl;
+				cout << " ( \\   / ) | (   ) | | )   ( |    | )   ( |    ) (    |  \\  ( | | |" << endl;
+				cout << "  \\ (_) /  | |   | | | |   | |    | | _ | |    | |    |   \\ | | | |" << endl;
+				cout << "   \\   /   | |   | | | |   | |    | |( )| |    | |    | (\\ \\) | | |" << endl;
+				cout << "    ) (    | |   | | | |   | |    | || || |    | |    | | \\   | (_)" << endl;
+				cout << "    | |    | (___) | | (___) |    | () () | ___) (___ | )  \\  |  _ " << endl;
+				cout << "    \\_/    (_______) (_______)    (_______) \\_______/ |/    )_) (_)" << endl;
 				SetConsoleTextAttribute(hConsole, 7);
 				gameRuning = false;
 			}
