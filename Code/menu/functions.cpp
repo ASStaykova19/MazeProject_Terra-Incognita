@@ -180,9 +180,11 @@ void drawMap(char** map)
 	}
 }
 
-void move(char** map, int x, int y, int& playerColect, int& colectCount)
+void move(char** map, int& colectCount, int& playerColect, int x, int y)
 {
 	bool gameRuning = true;
+
+	playerColect = 0;
 
 	while (gameRuning == true)
 	{
@@ -296,17 +298,10 @@ void move(char** map, int x, int y, int& playerColect, int& colectCount)
 			{
 				system("cls");
 				SetConsoleTextAttribute(hConsole, 2);
-				cout << "YOU WIN";
+				cout << "YOU WIN" << endl;
+				SetConsoleTextAttribute(hConsole, 7);
 				gameRuning = false;
 			}
-		}
-
-		if (GetAsyncKeyState(VK_ESCAPE))
-		{
-			system("cls");
-			SetConsoleTextAttribute(hConsole, 4);
-			cout << "GAME OVER";
-			gameRuning = false;
 		}
 	}
 }
