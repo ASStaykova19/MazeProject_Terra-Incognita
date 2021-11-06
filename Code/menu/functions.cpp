@@ -224,7 +224,8 @@ void move(char** map, int& colectCount, int& playerColect, int x, int y)
 			{
 				system("cls");
 				SetConsoleTextAttribute(hConsole, 2);
-				cout << "YOU WIN";
+				cout << "YOU WIN" << endl;
+				SetConsoleTextAttribute(hConsole, 7);
 				gameRuning = false;
 			}
 		}
@@ -248,7 +249,8 @@ void move(char** map, int& colectCount, int& playerColect, int x, int y)
 			{
 				system("cls");
 				SetConsoleTextAttribute(hConsole, 2);
-				cout << "YOU WIN";
+				cout << "YOU WIN" << endl;
+				SetConsoleTextAttribute(hConsole, 7);
 				gameRuning = false;
 			}
 		}
@@ -273,7 +275,8 @@ void move(char** map, int& colectCount, int& playerColect, int x, int y)
 			{
 				system("cls");
 				SetConsoleTextAttribute(hConsole, 2);
-				cout << "YOU WIN";
+				cout << "YOU WIN" << endl;
+				SetConsoleTextAttribute(hConsole, 7);
 				gameRuning = false;
 			}
 		}
@@ -308,6 +311,10 @@ void move(char** map, int& colectCount, int& playerColect, int x, int y)
 
 void enterSize()
 {
+	system("cls");
+	SetConsoleTextAttribute(hConsole, 8);
+	cout << "Enter map height:" << endl;
 	cin >> mapHeight;
+	cout << "Enter map width:" << endl;
 	cin >> mapWidth;
 }
