@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include <windows.h>
 #include<ctime>
 
@@ -317,4 +318,79 @@ void enterSize()
 	cin >> mapHeight;
 	cout << "Enter map width:" << endl;
 	cin >> mapWidth;
+}
+
+void beginGame()
+{
+	int colectCount = 0;
+	int playerColect = 0;
+
+	int x = 1;
+	int y = 1;
+
+	bool isRunning = true;
+
+	while (isRunning)
+	{
+		enterSize();
+
+		char* grid = new char[mapHeight * mapWidth];
+
+		char** map = new char* [mapHeight * mapWidth];
+
+		for (int i = 0; i < mapHeight; i++)
+		{
+			map[i] = new char[mapWidth];
+		}
+
+		for (int i = 0; i < mapWidth * mapHeight; i++)
+		{
+			grid[i] = '#';
+		}
+
+		generateMap(1, 1, grid);
+
+		map = transfer(map, grid, colectCount);
+
+		map[y][x] = 'J';
+		makeExit(map);
+
+		move(map, colectCount, playerColect, x, y);
+
+		string tryAgain;
+
+		SetConsoleTextAttribute(hConsole, 7);
+		cout << endl << "Would you like to continue? (Yes / No)" << endl;
+
+		getline(cin, tryAgain);
+
+		while (true)
+		{
+			getline(cin, tryAgain);
+
+			if (tryAgain == "Yes" || tryAgain == "YES" || tryAgain == "yes")
+			{
+				break;
+			}
+			else if (tryAgain == "No" || tryAgain == "NO" || tryAgain == "no")
+			{
+				delete[] grid;
+
+				for (int i = 0; i < mapHeight; i++)
+				{
+					delete[] map[i];
+				}
+
+				delete[] map;
+
+				isRunning = false;
+				break;
+			}
+			else
+			{
+				cout << "Invalid input" << endl;
+			}
+		}
+	}
+
 }
