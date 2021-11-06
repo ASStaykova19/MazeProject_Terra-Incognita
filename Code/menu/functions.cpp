@@ -38,7 +38,7 @@ void generateMap(int x, int y, char* grid)
 	dirs[2] = WALL_DOWN;
 	dirs[3] = WALL_LEFT;
 
-	for (int i = 0; i < 4; ++i)
+	for (int i = 0; i < 4; i++)
 	{
 		int r = rand() & 3;
 		int temp = dirs[r];
@@ -46,7 +46,7 @@ void generateMap(int x, int y, char* grid)
 		dirs[i] = temp;
 	}
 
-	for (int i = 0; i < 4; ++i)
+	for (int i = 0; i < 4; i++)
 	{
 		int dx = 0, dy = 0;
 
@@ -79,9 +79,9 @@ char** transfer(char** map, char* grid, int& colectCount)
 
 	colectCount = 0;
 
-	for (int y = 0; y < mapHeight; ++y)
+	for (int y = 0; y < mapHeight; y++)
 	{
-		for (int x = 0; x < mapWidth; ++x)
+		for (int x = 0; x < mapWidth; x++)
 		{
 			map[y][x] = grid[indexXY(x, y)];
 
@@ -147,9 +147,9 @@ void drawMap(char** map)
 {
 	system("cls");
 
-	for (int y = 0; y < mapHeight; ++y)
+	for (int y = 0; y < mapHeight; y++)
 	{
-		for (int x = 0; x < mapWidth; ++x)
+		for (int x = 0; x < mapWidth; x++)
 		{
 			if (map[y][x] == 'J')
 			{
