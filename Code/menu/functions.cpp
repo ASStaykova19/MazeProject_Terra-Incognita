@@ -76,6 +76,8 @@ char** transfer(char** map, char* grid, int& colectCount)
 {
 	system("cls");
 
+	colectCount = 0;
+
 	for (int y = 0; y < mapHeight; ++y)
 	{
 		for (int x = 0; x < mapWidth; ++x)
