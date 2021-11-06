@@ -92,7 +92,22 @@ void menu()
 			else
 			{
 				system("cls");
+				SetConsoleTextAttribute(hConsole, 7);
+				cout << endl;
+				cout << " Here's how you can play this maze:\n\n";
+				SetConsoleTextAttribute(hConsole, 5);
+				cout << " * When you choose the option 'Begin Game' you have to enter map height and width\n";
+
+				cout << " * You can move your character by using the UP, DOWN, LEFT and RIGHT arrows\n";
+
+				cout << " * Collect the collectables (*) to earn extra points\n";
+
+				cout << " * After you reach the end of the maze you'll have to choose if you want to play again or not\n\n";
+				SetConsoleTextAttribute(hConsole, 7);
+				cout << " Press any button to return to the menu";
 				system("pause>nul");
+
+
 			}
 		}
 		system("cls");
