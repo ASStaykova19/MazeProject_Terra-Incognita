@@ -1,6 +1,6 @@
 # Team Terra Incognita
 <p align = "center">
-<img width = "575" height = "180" src = "Documents and logo/Logo/logo.png">
+<img width = "650" height = "350" src = "Documents and logo/Logo/logo.png">
 </p>
 ## 👥 Team    <a name = "team"></a>
 
