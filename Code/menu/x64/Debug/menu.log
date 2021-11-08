@@ -1,3 +1,6 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (menu.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  main.cpp
   functions.cpp
-  menu.vcxproj -> C:\Users\Mirela\Desktop\sdasda\MazeProject_Terra-Incognita\Code\x64\Debug\main.exe
+  menu.cpp
+  Generating Code...
+  menu.vcxproj -> C:\Users\ACER\source\repos\MazeProject_Terra-Incognita\Code\x64\Debug\main.exe
